@@ -20,9 +20,11 @@ jobs:
           - { php: '8.4', laravel: '13.0', testbench: '11.0' }
     steps:
       - uses: actions/checkout@v4
-      # the core package is a sibling path repository during development; in CI it comes from Packagist
-      - name: Use the released core package
-        run: composer config --unset repositories.0 && composer require "omerkoseoglu/devextreme-data:^0.1 || dev-main" --no-update
+      # during development the core package is a sibling path repository; CI takes it from GitHub (tags once released)
+      - name: Use the core package from GitHub
+        run: |
+          jq '.repositories = [{"type": "vcs", "url": "https://github.com/omerkoseoglu/devextreme-data"}]' composer.json > composer.tmp
+          mv composer.tmp composer.json
       - uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
