@@ -1,5 +1,7 @@
 # DevExtreme Data for Laravel
 
+[![Packagist Version](https://img.shields.io/packagist/v/omerkoseoglu/devextreme-data-laravel)](https://packagist.org/packages/omerkoseoglu/devextreme-data-laravel) [![PHP Version](https://img.shields.io/packagist/dependency-v/omerkoseoglu/devextreme-data-laravel/php)](https://packagist.org/packages/omerkoseoglu/devextreme-data-laravel) [![CI](https://github.com/omerkoseoglu/devextreme-data-laravel/actions/workflows/ci.yml/badge.svg)](https://github.com/omerkoseoglu/devextreme-data-laravel/actions/workflows/ci.yml) [![Downloads](https://img.shields.io/packagist/dt/omerkoseoglu/devextreme-data-laravel)](https://packagist.org/packages/omerkoseoglu/devextreme-data-laravel) [![License](https://img.shields.io/packagist/l/omerkoseoglu/devextreme-data-laravel)](LICENSE)
+
 > **Unofficial.** This is an independent, community-maintained port. It is not affiliated with, endorsed by or supported by Developer Express Inc. "DevExtreme" and "DevExpress" are trademarks of Developer Express Inc.
 
 Laravel integration for `omerkoseoglu/devextreme-data`: answer DevExtreme widget requests
