@@ -89,6 +89,21 @@ Use `columns` in production. Values may also be `DB::raw()` expressions: `'total
 $options = $request->devExtremeOptions(); // DevExtreme\Data\LoadOptions
 ```
 
+## Known limitations
+
+- **No hydration.** Rows are plain arrays: Eloquent casts, accessors, `$appends`, `$hidden` and model events do not run.
+  Dates come back as strings, booleans as `0`/`1` on most drivers.
+- **Queries bypass Laravel's database layer.** `EloquentSource` runs on the connection's PDO directly, so `DB::listen`,
+  the query log, Telescope and Debugbar do not see these queries. Transactions opened on the write connection are not
+  visible if you use read/write splitting (the read PDO is used).
+- **The builder is captured once** when `EloquentSource::for()` is called; later changes to it are ignored.
+- **Joins need explicit, unique column names** (`->select('orders.id', 'customers.name as customer_name')`), because the
+  query is used as a derived table.
+- **Drivers:** SQLite, MySQL/MariaDB, PostgreSQL. SQL Server is not supported.
+- **Dates and timezones:** filter dates are compared as wall-clock time and never converted; see the core package's
+  known limitations (browser `Date` values reach the server as UTC).
+- **Laravel 12 and 13 only** (PHP 8.2+); older Laravel versions are not supported.
+
 ## Development
 
 ```bash
