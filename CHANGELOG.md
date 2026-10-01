@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.0 - 2026-10-01
 
 - Initial release: `EloquentSource`, `DevExtreme` facade / `DevExtremeLoader`, `$request->devExtremeOptions()`, `max_take` guard.
 - Supports Laravel 12 and 13 (PHP 8.2+).
