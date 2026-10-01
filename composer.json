@@ -1,0 +1,70 @@
+{
+    "name": "mihenk/devextreme-data-laravel",
+    "description": "Laravel integration for mihenk/devextreme-data: server-side DevExtreme data processing over Eloquent models, query builders and collections.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "eloquent",
+        "devextreme",
+        "datagrid",
+        "pivotgrid",
+        "server-side",
+        "pagination",
+        "grouping"
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/database": "^12.0 || ^13.0",
+        "illuminate/http": "^12.0 || ^13.0",
+        "illuminate/support": "^12.0 || ^13.0",
+        "mihenk/devextreme-data": "*@dev"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.64",
+        "orchestra/testbench": "^10.0 || ^11.0",
+        "phpunit/phpunit": "^10.5 || ^11.0 || ^12.0"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../devextreme-php-data",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DevExtreme\\Data\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DevExtreme\\Data\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DevExtreme\\Data\\Laravel\\DevExtremeDataServiceProvider"
+            ],
+            "aliases": {
+                "DevExtreme": "DevExtreme\\Data\\Laravel\\Facades\\DevExtreme"
+            }
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "cs": "php-cs-fixer fix --dry-run --diff",
+        "cs:fix": "php-cs-fixer fix"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
