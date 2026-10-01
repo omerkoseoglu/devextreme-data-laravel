@@ -18,9 +18,6 @@ use Illuminate\Support\Collection;
 use InvalidArgumentException;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
-/**
- * The service behind the `DevExtreme` facade.
- */
 final class DevExtremeLoader
 {
     /**

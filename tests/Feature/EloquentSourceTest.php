@@ -156,7 +156,7 @@ final class EloquentSourceTest extends TestCase
 
         $result = $this->load($source, ['filter' => ['total', '>=', 300], 'select' => ['id']]);
 
-        // 30*3, 40*1, 50*5, 60*4, 70*6 -> >= 300: 50*5=250 no; 60*4=240 no; 70*6=420 yes
+        // amount * qty: 90, 40, 250, 240, 420; only 420 reaches 300
         self::assertSame([['id' => 8]], $result['data']);
     }
 
