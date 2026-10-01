@@ -4,4 +4,4 @@
 2. Make your change together with a test.
 3. `composer cs` and `composer test` must pass.
 
-Behaviour of the data processing itself lives in `mihenk/devextreme-data`; fix it there.
+Behaviour of the data processing itself lives in `omerkoseoglu/devextreme-data`; fix it there.

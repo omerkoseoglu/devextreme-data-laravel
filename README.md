@@ -2,7 +2,7 @@
 
 > **Unofficial.** This is an independent, community-maintained port. It is not affiliated with, endorsed by or supported by Developer Express Inc. "DevExtreme" and "DevExpress" are trademarks of Developer Express Inc.
 
-Laravel integration for `mihenk/devextreme-data`: answer DevExtreme widget requests
+Laravel integration for `omerkoseoglu/devextreme-data`: answer DevExtreme widget requests
 (`DataGrid`, `PivotGrid`, `SelectBox`, ... with `remoteOperations`) straight from Eloquent models, relations,
 query builders, collections or arrays. Filtering, sorting, paging, grouping and summaries run **in the database**.
 
@@ -11,7 +11,7 @@ Requires PHP 8.2+, Laravel 12 or 13. SQLite, MySQL/MariaDB and PostgreSQL connec
 ## Install
 
 ```bash
-composer require mihenk/devextreme-data-laravel
+composer require omerkoseoglu/devextreme-data-laravel
 ```
 
 The service provider and the `DevExtreme` facade are auto-discovered. Optional config:

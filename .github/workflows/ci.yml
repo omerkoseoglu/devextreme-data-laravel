@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v4
       # the core package is a sibling path repository during development; in CI it comes from Packagist
       - name: Use the released core package
-        run: composer config --unset repositories.0 && composer require "mihenk/devextreme-data:^0.1 || dev-main" --no-update
+        run: composer config --unset repositories.0 && composer require "omerkoseoglu/devextreme-data:^0.1 || dev-main" --no-update
       - uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
